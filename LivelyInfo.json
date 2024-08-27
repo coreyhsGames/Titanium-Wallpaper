@@ -1,17 +1,17 @@
 {
-    "AppVersion": "1.0.0.0",
-    "Title": "Titanium Wallpaper",
-    "Thumbnail": "",
-    "Preview": "",
-    "Desc": "Test",
-    "Author": "coreyhsGames",
-    "License": "MIT",
-    "Contact": "",
-    "Type": 1,
-    "FileName": "src/wallpaper.html",
-    "Arguments": " --audio --system-information --system-nowplaying",
-    "IsAbsolutePath": false,
-    "Id": null,
-    "Tags": null,
-    "Version": 0
-  }
+  "AppVersion": "1.0.0.0",
+  "Title": "Titanium Wallpaper",
+  "Thumbnail": "res/thumbnail.png",
+  "Preview": "",
+  "Desc": "Test",
+  "Author": "coreyhsGames",
+  "License": "MIT",
+  "Contact": "",
+  "Type": 1,
+  "FileName": "src/wallpaper.html",
+  "Arguments": " --audio --system-information --system-nowplaying",
+  "IsAbsolutePath": false,
+  "Id": null,
+  "Tags": null,
+  "Version": 0
+}
