@@ -1,5 +1,7 @@
 # Titanium Wallpaper
 
+<img src="/res/thumbnail.png" width="600"/>
+
 ## About
 Titanium Wallpaper is a custom Lively Wallpaper. It was made for myself but I have decided to make it public on GitHub.
 
