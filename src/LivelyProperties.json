@@ -54,5 +54,13 @@
         "text": "Neon Glow Intensity",
         "type": "slider",
         "value": 10
+    },
+    "albumSize": {
+        "max": 400,
+        "min": 150,
+        "step": 10,
+        "text": "Album Size",
+        "type": "slider",
+        "value": 200
     }
 }
