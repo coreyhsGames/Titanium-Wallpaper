@@ -15,6 +15,7 @@ var sprcctrumY = 0.5;
 var opacity = 1;
 var imgName = "";
 var imageOverlayDarkness = 0.3;
+var albumSize = 200;
 
 async function livelyCurrentTrack(data) {
     let obj = JSON.parse(data);
@@ -50,11 +51,15 @@ function livelyPropertyListener(name, val) {
     }
     else if (name == "imgPath") {
         imgName = val;
-        document.getElementById("backgroundImg").setAttribute("src", "./" + val);
+        document.getElementById("backgroundImg").src = "/" + imgName;
     }
     else if (name == "imgOverlay") {
         imageOverlayDarkness = val / 100;
         document.getElementById('backgroundOverlay').style.backgroundColor = `rgba(0, 0, 0, ${imageOverlayDarkness})`;
+    }
+    else if (name == "albumSize") {
+        albumSize = val;
+        document.querySelector('.song-icon').style.width = `${albumSize}px`;
     }
 }
 
