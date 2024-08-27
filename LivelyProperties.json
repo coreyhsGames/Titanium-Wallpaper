@@ -1,0 +1,58 @@
+{
+    "label1": {
+        "type": "label",
+        "value": "General"
+    },
+    "imgOverlay": {
+        "max": 100,
+        "min": 0,
+        "step": 1,
+        "text": "Image Darkness",
+        "type": "slider",
+        "value": 30
+    },
+    "imgPath": {
+        "type": "folderDropdown",
+        "value": "default.jpg",
+        "text": "Image/Gif",
+        "filter": "*.jpg|*.png|*.gif",
+        "folder": "images"
+    },
+    "label2": {
+        "type": "label",
+        "value": "Audio Visualiser"
+    },
+    "color1": {
+        "text": "Starting Colour",
+        "type": "color",
+        "value": "#5603fc"
+    },
+    "color2": {
+        "text": "Ending Colour",
+        "type": "color",
+        "value": "#fc0303"
+    },
+    "opacity": {
+        "max": 100,
+        "min": 0,
+        "tick": 25,
+        "step": 1,
+        "text": "Opacity",
+        "type": "slider",
+        "value": 100
+    },
+    "glow": {
+        "text": "Neon Glow",
+        "type": "checkbox",
+        "value": "true"
+    },
+    "glowStrength": {
+        "max": 50,
+        "min": 1,
+        "tick": 25,
+        "step": 1,
+        "text": "Neon Glow Intensity",
+        "type": "slider",
+        "value": 10
+    }
+}

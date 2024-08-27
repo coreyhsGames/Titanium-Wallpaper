@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/wallpaper.css">
+    <script defer src="./js/wallpaper.js"></script>
+    <script defer src="./js/weather.js"></script>
+    <script defer src="./js/music.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="backgroundOverlay" style="background-color: rgba(0, 0, 0, 0.3);"></div>
+    <img id="backgroundImg" src="./images/default.jpg"></img>
+    <div style="display: flex; flex-direction: column; align-items: center;">
+        <div class="widget" id="time-widget" style="margin-top: 15px;">
+            <h2 style="font-size: 100px;">Time</h2>
+        </div>
+        <div class="widget" id="date-widget">
+            <h2 style="font-size: 48px;">Date</h2>
+        </div>
+    </div>
+    <div>
+        <div class="music-player hide">
+            <div style="display: flex; justify-content: center;">
+                <img src="./images/placeholder.jpg" class="song-icon">
+            </div>
+            <div class="song-info">
+                <h3 id="song-artist">Song Artist</h3>
+                <h3 id="song-name">Song Name</h3>
+            </div>
+        </div>
+        <canvas id="canvas"></canvas>
+        <div class="main-widget">
+            <div class="widget" id="current-weather-widget">
+                <div class="weather-icon" id="icon"></div>
+                <h3 id="temperature"></h3>
+            </div>
+            <div class="widget" id="next-sub-widget">
+                <h2 id="next-subject">Loading...</h2>
+            </div>
+        </div>
+    </div>
+    <p style="bottom: 45px; position: absolute; color: #ffff; padding: 10px; text-shadow: 1px 1px 4px #000;">Made by
+        coreyhsGames</p>
+</body>
+
+</html>

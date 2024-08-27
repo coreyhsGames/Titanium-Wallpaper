@@ -1,0 +1,41 @@
+{
+    "Monday": [
+        { "SubjectName": "History", "Start": "08:45AM", "End": "09:45AM" },
+        { "SubjectName": "Calculus", "Start": "09:55AM", "End": "10:55AM" },
+        { "SubjectName": "English", "Start": "11:25AM", "End": "12:20PM" },
+        { "SubjectName": "Physics", "Start": "12:25PM", "End": "01:25PM" },
+        { "SubjectName": "Mathematics", "Start": "02:15PM", "End": "03:15PM" }
+    ],
+
+    "Tuesday": [
+        { "SubjectName": "DTS", "Start": "08:45AM", "End": "09:45AM" },
+        { "SubjectName": "History", "Start": "09:55AM", "End": "10:55AM" },
+        { "SubjectName": "Calculus", "Start": "11:25AM", "End": "12:20PM" },
+        { "SubjectName": "English", "Start": "12:25PM", "End": "01:25PM" },
+        { "SubjectName": "Physics", "Start": "02:15PM", "End": "03:15PM" }
+    ],
+
+    "Wednesday": [
+        { "SubjectName": "Mathematics", "Start": "09:15AM", "End": "10:05AM" },
+        { "SubjectName": "DTS", "Start": "10:15AM", "End": "11:05AM" },
+        { "SubjectName": "Atawhai", "Start": "11:35AM", "End": "12:30PM" },
+        { "SubjectName": "History", "Start": "12:35PM", "End": "01:30PM" },
+        { "SubjectName": "Calculus", "Start": "02:20PM", "End": "03:15PM" }
+    ],
+
+    "Thursday": [
+        { "SubjectName": "English", "Start": "08:45AM", "End": "09:45AM" },
+        { "SubjectName": "Physics", "Start": "09:55AM", "End": "10:55AM" },
+        { "SubjectName": "Mathematics", "Start": "11:25AM", "End": "12:20PM" },
+        { "SubjectName": "DTS", "Start": "12:25PM", "End": "01:25PM" },
+        { "SubjectName": "History", "Start": "02:15PM", "End": "03:15PM" }
+    ],
+
+    "Friday": [
+        { "SubjectName": "Calculus", "Start": "08:45AM", "End": "09:45AM" },
+        { "SubjectName": "English", "Start": "09:55AM", "End": "10:55AM" },
+        { "SubjectName": "Physics", "Start": "11:25AM", "End": "12:20PM" },
+        { "SubjectName": "Mathematics", "Start": "12:25PM", "End": "01:25PM" },
+        { "SubjectName": "DTS", "Start": "02:15PM", "End": "03:15PM" }
+    ]
+}
