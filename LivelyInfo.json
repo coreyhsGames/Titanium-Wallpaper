@@ -8,7 +8,7 @@
     "License": "MIT",
     "Contact": "",
     "Type": 1,
-    "FileName": "wallpaper.html",
+    "FileName": "src/wallpaper.html",
     "Arguments": " --audio --system-information --system-nowplaying",
     "IsAbsolutePath": false,
     "Id": null,
