@@ -1,7 +1,7 @@
 {
     "label1": {
         "type": "label",
-        "value": "General"
+        "value": "Background"
     },
     "imgOverlay": {
         "max": 100,
@@ -19,6 +19,15 @@
         "folder": "images"
     },
     "label2": {
+        "type": "label",
+        "value": "Location"
+    },
+    "city": {
+        "type": "textbox",
+        "text": "City",
+        "value": "London"
+    },
+    "label3": {
         "type": "label",
         "value": "Audio Visualiser"
     },

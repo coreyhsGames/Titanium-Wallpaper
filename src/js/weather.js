@@ -15,15 +15,10 @@ const icons = {
 };
 
 async function fetchCurrentWeather() {
-    await fetch('./data/weather.json')
-        .then(response => response.json())
-        .then(data => {
-            latitude = data.latitude;
-            longitude = data.longitude;
-        })
-        .catch(error => console.error('Error fetching weather:', error));
+    const cityReposnse = await fetch(`https://nominatim.openstreetmap.org/search?city=${window.config.city}&format=json`);
+    const cityData = await cityReposnse.json();
 
-    const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,precipitation,weathercode&timezone=Pacific%2FAuckland`);
+    const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${cityData[0].lat}&longitude=${cityData[0].lon}&current=temperature_2m,precipitation,weathercode&timezone=Pacific%2FAuckland`);
     const data = await response.json();
 
     if (data.current) {
@@ -49,7 +44,7 @@ async function fetchCurrentWeather() {
     }
 };
 fetchCurrentWeather();
-setInterval(fetchCurrentWeather, 600000);
+setInterval(fetchCurrentWeather, 1000);
 
 function getWeatherDescriptionAndIcon(weatherCode) {
     switch (weatherCode) {

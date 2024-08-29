@@ -5,9 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/wallpaper.css">
-    <script defer src="./js/wallpaper.js"></script>
-    <script defer src="./js/weather.js"></script>
-    <script defer src="./js/music.js"></script>
     <title>Document</title>
 </head>
 
@@ -36,7 +33,7 @@
         <div class="main-widget">
             <div class="widget" id="current-weather-widget">
                 <div class="weather-icon" id="icon"></div>
-                <h3 id="temperature"></h3>
+                <h3 id="temperature">Loading...</h3>
             </div>
             <div class="widget" id="next-sub-widget">
                 <h2 id="next-subject">Loading...</h2>
@@ -45,6 +42,11 @@
     </div>
     <p style="bottom: 45px; position: absolute; color: #ffff; padding: 10px; text-shadow: 1px 1px 4px #000;">Made by
         coreyhsGames</p>
+    <!-- SCRIPTS -->
+    <script defer src="./js/config.js"></script>
+    <script defer src="./js/wallpaper.js"></script>
+    <script defer src="./js/weather.js"></script>
+    <script defer src="./js/music.js"></script>
 </body>
 
 </html>
