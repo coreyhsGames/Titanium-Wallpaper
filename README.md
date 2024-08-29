@@ -6,7 +6,7 @@
 Titanium Wallpaper is a custom Lively Wallpaper. It was made for myself but I have decided to make it public on GitHub.
 
 **The wallpaper contains:**
-- Local Time (12h format)
+- Local Time (12h and 24h formats)
 - Local Date
 - Music Playing and Audio Visualiser
 - Weather
