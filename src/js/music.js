@@ -4,18 +4,8 @@ const headerArtist = document.getElementById('song-artist');
 const headerTitle = document.getElementById('song-name');
 
 var numberOfFrequencies = 1;
-var inputColor1 = "#5603fc";
-var inputColor2 = "#fc0303";
-var glow = true;
-var glowStrength = 10;
 var amplitude = 300;
 var spectrumScale = 1;
-var spectrumX = 0.5;
-var sprcctrumY = 0.5;
-var opacity = 1;
-var imgName = "";
-var imageOverlayDarkness = 0.3;
-var albumSize = 200;
 
 async function livelyCurrentTrack(data) {
     let obj = JSON.parse(data);
@@ -32,82 +22,47 @@ async function livelyCurrentTrack(data) {
     }
 }
 
-function livelyPropertyListener(name, val) {
-    // or switch-case...
-    if (name == "color1") {
-        inputColor1 = hexToRGB(val);
-    }
-    else if (name == "color2") {
-        inputColor2 = hexToRGB(val);
-    }
-    else if (name == "glow") {
-        glow = val;
-    }
-    else if (name == "glowStrength") {
-        glowStrength = val;
-    }
-    else if (name == "opacity") {
-        opacity = val / 100;
-    }
-    else if (name == "imgPath") {
-        imgName = val;
-        document.getElementById("backgroundImg").src = "/" + imgName;
-    }
-    else if (name == "imgOverlay") {
-        imageOverlayDarkness = val / 100;
-        document.getElementById('backgroundOverlay').style.backgroundColor = `rgba(0, 0, 0, ${imageOverlayDarkness})`;
-    }
-    else if (name == "albumSize") {
-        albumSize = val;
-        document.querySelector('.song-icon').style.width = `${albumSize}px`;
-    }
+async function livelyAudioListener(audioArray) {
+    await drawSpectrum(audioArray);
 }
 
-function livelyAudioListener(audioArray) {
-    drawSpectrum(audioArray);
-}
-
-function drawSpectrum(audioArray) {
-    let c = document.getElementById("canvas");
-    let ctx = c.getContext("2d");
+async function drawSpectrum(audioArray) {
+    let canvas = document.getElementById("canvas");
+    let ctx = canvas.getContext("2d");
     let Wwidth = Math.round(window.innerWidth * spectrumScale);
     let Wheight = Math.round((window.innerHeight / 2 + amplitude) * spectrumScale);
-    c.setAttribute('width', Wwidth);
-    c.setAttribute('height', Wheight);
+    canvas.setAttribute('width', Wwidth);
+    canvas.setAttribute('height', Wheight);
 
-    //c.style.left = Math.round(window.innerWidth * spectrumX - c.width / 2) + "px";
-    //c.style.top = Math.round(window.innerHeight * spectrumY - c.height) + "px";
-
-    ctx.clearRect(0, 0, c.width, c.height);
-    if (glow) {
-        ctx.shadowBlur = glowStrength;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    if (window.config.glow) {
+        ctx.shadowBlur = window.config.glowStrength;
     }
     else {
         ctx.shadowBlur = 0;
     }
 
-    ctx.globalAlpha = opacity;
+    ctx.globalAlpha = window.config.opacity;
 
-    let width = c.width;
-    let height = c.height;
+    let width = canvas.width;
+    let height = canvas.height;
     let offset = Math.round(0 * width);
     let numberOfSamples = 128;
     let spacing = Math.round(3 * spectrumScale);
     let barwidth = Math.floor((width - 2 * offset - (numberOfFrequencies - 1) * spacing) / numberOfFrequencies);
 
     let a = 0;
-
     for (let i = 0; i < numberOfSamples; i++) {
         if (i == 0) {
-            ctx.fillStyle = interpolateColor(inputColor1, inputColor2, a / numberOfFrequencies);
-            ctx.shadowColor = interpolateColor(inputColor1, inputColor2, a / numberOfFrequencies);
+            ctx.fillStyle = interpolateColor(hexToRGB(window.config.inputColor1), hexToRGB(window.config.inputColor2), a / numberOfFrequencies);
+            ctx.shadowColor = interpolateColor(hexToRGB(window.config.inputColor1), hexToRGB(window.config.inputColor2), a / numberOfFrequencies);
             ctx.fillRect(offset + a * (barwidth + spacing), height - 50 - Math.round((amplitude * spectrumScale) * Math.min(1, audioArray[i])), barwidth, Math.round((amplitude * spectrumScale) * Math.min(1, audioArray[i])));
             a++
         }
         else {
             if (audioArray[i] != audioArray[i - 1]) {
-                ctx.fillStyle = interpolateColor(inputColor1, inputColor2, a / numberOfFrequencies);
-                ctx.shadowColor = interpolateColor(inputColor1, inputColor2, a / numberOfFrequencies);
+                ctx.fillStyle = interpolateColor(hexToRGB(window.config.inputColor1), hexToRGB(window.config.inputColor2), a / numberOfFrequencies);
+                ctx.shadowColor = interpolateColor(hexToRGB(window.config.inputColor1), hexToRGB(window.config.inputColor2), a / numberOfFrequencies);
                 ctx.fillRect(offset + a * (barwidth + spacing), height - 50 - Math.round((amplitude * spectrumScale) * Math.min(1, audioArray[i])), barwidth, Math.round((amplitude * spectrumScale) * Math.min(1, audioArray[i])));
                 a++
             }

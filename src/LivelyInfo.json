@@ -9,7 +9,7 @@
   "Contact": "",
   "Type": 1,
   "FileName": "wallpaper.html",
-  "Arguments": " --audio --system-information --system-nowplaying",
+  "Arguments": " --audio --system-nowplaying",
   "IsAbsolutePath": false,
   "Id": null,
   "Tags": null,
