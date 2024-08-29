@@ -9,7 +9,7 @@ Titanium Wallpaper is a custom Lively Wallpaper. It was made for myself but I ha
 - Local Time (12h format)
 - Local Date
 - Music Playing and Audio Visualiser
-- Weather (requries changing longitude and latitude in [weather.json](https://github.com/coreyhsGames/Titanium-Wallpaper/blob/main/src/data/weather.json))
+- Weather
 - Upcoming Classes (requires changing in [subjects.json](https://github.com/coreyhsGames/Titanium-Wallpaper/blob/main/src/data/subjects.json))
 
 ## Download
