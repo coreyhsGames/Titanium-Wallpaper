@@ -17,12 +17,13 @@ Requires **[Lively Wallpaper](https://github.com/rocksdanister/lively)**.
 
 1. Go to [releases](https://github.com/coreyhsGames/Titanium-Wallpaper/releases) and download the latest .zip file.
 2. Import the .zip file into Lively Wallpaper.
-3. Apply the wallpaper.
+3. Set as wallpaper.
 
 ## Configuration
 This can be done within the Lively Wallpaper application. Right click or click the three dots on the wallpaper and click **Customise**.
 <br>
 <img src="/res/customise-1.png" width="300"/>
+<br>
 <img src="/res/customise-2.png" width="300"/>
 
 ## License
