@@ -21,6 +21,7 @@ Requires **[Lively Wallpaper](https://github.com/rocksdanister/lively)**.
 
 ## Configuration
 This can be done within the Lively Wallpaper application. Right click or click the three dots on the wallpaper and click **Customise**.
+<br>
 <img src="/res/customise-1.png" width="300"/>
 <img src="/res/customise-2.png" width="300"/>
 
