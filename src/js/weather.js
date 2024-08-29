@@ -1,17 +1,30 @@
 let latitude = 0;
 let longitude = 0;
 
-// Replace with your actual SVG icon paths
-const icons = {
-    'clear': './weatherIcons/clear-day.svg',
-    'cloudy': './weatherIcons/cloudy.svg',
-    'fog': './weatherIcons/fog.svg',
-    'drizzle': './weatherIcons/rainy-1.svg',
-    'freezing-drizzle': './weatherIcons/snowy-1.svg',
-    'rain': './weatherIcons/rainy-3.svg',
-    'freezing-rain': './weatherIcons/snow-and-sleet-mix.svg',
-    'snow': './weatherIcons/snowy-3.svg',
-    'thunderstorm': './weatherIcons/severe-thunderstorm.svg',
+// Static weather svg icons
+const iconsStatic = {
+    'clear': './weatherIcons/static/clear-day.svg',
+    'cloudy': './weatherIcons/static/cloudy.svg',
+    'fog': './weatherIcons/static/fog.svg',
+    'drizzle': './weatherIcons/static/rainy-1.svg',
+    'freezing-drizzle': './weatherIcons/static/snowy-1.svg',
+    'rain': './weatherIcons/static/rainy-3.svg',
+    'freezing-rain': './weatherIcons/static/snow-and-sleet-mix.svg',
+    'snow': './weatherIcons/static/snowy-3.svg',
+    'thunderstorm': './weatherIcons/static/severe-thunderstorm.svg',
+};
+
+// Animated weather svg icons
+const iconsAnimated = {
+    'clear': './weatherIcons/animated/clear-day.svg',
+    'cloudy': './weatherIcons/animated/cloudy.svg',
+    'fog': './weatherIcons/animated/fog.svg',
+    'drizzle': './weatherIcons/animated/rainy-1.svg',
+    'freezing-drizzle': './weatherIcons/animated/snowy-1.svg',
+    'rain': './weatherIcons/animated/rainy-3.svg',
+    'freezing-rain': './weatherIcons/animated/snow-and-sleet-mix.svg',
+    'snow': './weatherIcons/animated/snowy-3.svg',
+    'thunderstorm': './weatherIcons/animated/severe-thunderstorm.svg',
 };
 
 async function fetchCurrentWeather() {
@@ -35,7 +48,7 @@ async function fetchCurrentWeather() {
         const weatherIcon = document.getElementById('icon');
 
         // Get description and icon based on weather code
-        const { description, icon } = getWeatherDescriptionAndIcon(weatherCode);
+        const { description, icon } = getWeatherDescriptionAndIcon(weatherCode, window.config.animatedWeatherIcons);
 
         weatherIcon.innerHTML = `<img src="${icon}" alt="${description}">`;
         weatherIcon.title = description;
@@ -46,7 +59,9 @@ async function fetchCurrentWeather() {
 fetchCurrentWeather();
 setInterval(fetchCurrentWeather, 1000);
 
-function getWeatherDescriptionAndIcon(weatherCode) {
+function getWeatherDescriptionAndIcon(weatherCode, animated) {
+    const icons = animated ? iconsAnimated : iconsStatic;
+
     switch (weatherCode) {
         case 0:
             return { description: 'Clear', icon: icons.clear };
