@@ -19,5 +19,8 @@ Requires **[Lively Wallpaper](https://github.com/rocksdanister/lively)**.
 2. Import the .zip file into Lively Wallpaper.
 3. Apply the wallpaper.
 
+## Configuration
+This can be done within the Lively Wallpaper application. Right click or click the three dots on the wallpaper and click **Customise**.
+
 ## License
 This repository is licensed under the **[MIT LICENSE](https://github.com/coreyhsGames/Titanium-Wallpaper/blob/main/LICENSE)**.
