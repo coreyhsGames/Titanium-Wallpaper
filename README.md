@@ -4,7 +4,9 @@
 
 ## About
 Titanium Wallpaper is a custom Lively Wallpaper. It was made for myself but I have decided to make it public on GitHub.
-
+<br><br>
+**[Trello Board](https://trello.com/b/qsX7QiyE/titanium-wallpaper)**
+<br><br>
 **The wallpaper contains:**
 - Local Time (12h and 24h formats)
 - Local Date
