@@ -10,6 +10,33 @@ let currentTime = "";
 
 let timetable;
 
+function convertTo24Hour(time12h) {
+    // Remove extra spaces and split the time string
+    const parts = time12h.trim().match(/^(\d+)\s+(\d+)\s*(AM|PM)$/i);
+    
+    if (!parts) {
+        throw new Error('Invalid time format');
+    }
+
+    let [ , hourStr, minuteStr, period ] = parts;
+
+    // Convert hours and minutes to numbers
+    let hours = parseInt(hourStr, 10);
+    const minutes = parseInt(minuteStr, 10);
+
+    if (period.toUpperCase() === 'PM' && hours !== 12) {
+        hours += 12;
+    } else if (period.toUpperCase() === 'AM' && hours === 12) {
+        hours = 0;
+    }
+
+    // Format hours and minutes to two digits
+    const hours24 = hours.toString().padStart(2, '0');
+    const minutes24 = minutes.toString().padStart(2, '0');
+
+    return `${hours24} <span style="font-weight: 400; color: #b939cc;">${minutes24}</span>`;
+}
+
 function updateTime() {
     // Define options for formatting
     const weekdayOptions = { weekday: 'long' };
@@ -41,7 +68,11 @@ function updateTime() {
     // Construct the formatted date string
     const formattedDate = `${weekday} | ${day} ${month} ${year}`;
 
-    document.querySelector('#time-widget h2').innerHTML = `${time}<span style="font-weight: 400; font-size: 22px;">${isPM ? 'PM' : 'AM'}</span>`;
+    if (window.config.use24HTime) {
+        document.querySelector('#time-widget h2').innerHTML = convertTo24Hour(`${hours} ${minutes}${isPM ? 'PM' : 'AM'}`);
+    } else {
+        document.querySelector('#time-widget h2').innerHTML = `${time}<span style="font-weight: 400; font-size: 22px;">${isPM ? 'PM' : 'AM'}</span>`;
+    }
 
     document.querySelector('#date-widget h2').innerText = formattedDate;
 

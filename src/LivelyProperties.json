@@ -20,14 +20,28 @@
     },
     "label2": {
         "type": "label",
-        "value": "Location"
+        "value": "Weather"
     },
     "city": {
         "type": "textbox",
         "text": "City",
         "value": "London"
     },
+    "animatedWeatherIcons": {
+        "text": "Animated Weather Icons",
+        "type": "checkbox",
+        "value": "false"
+    },
     "label3": {
+        "type": "label",
+        "value": "Time"
+    },
+    "use24HTime": {
+        "text": "Use 24 Hour Time",
+        "type": "checkbox",
+        "value": "false"
+    },
+    "label4": {
         "type": "label",
         "value": "Audio Visualiser"
     },
