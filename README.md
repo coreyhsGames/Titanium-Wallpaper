@@ -11,6 +11,7 @@ Titanium Wallpaper is a custom Lively Wallpaper. It was made for myself but I ha
 - Local Time (12h and 24h formats)
 - Local Date
 - Music Playing and Audio Visualiser
+- Customisable Background
 - Weather
 - Upcoming Classes (requires changing in [subjects.json](https://github.com/coreyhsGames/Titanium-Wallpaper/blob/main/src/data/subjects.json))
 
