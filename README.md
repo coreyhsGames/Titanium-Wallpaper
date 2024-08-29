@@ -28,3 +28,6 @@ This can be done within the Lively Wallpaper application. Right click or click t
 
 ## License
 This repository is licensed under the **[MIT LICENSE](https://github.com/coreyhsGames/Titanium-Wallpaper/blob/main/LICENSE)**.
+
+## Credits
+- [Weather SVG Icons](https://github.com/Makin-Things/weather-icons)
