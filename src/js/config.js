@@ -23,10 +23,14 @@ function livelyPropertyListener(name, val) {
         document.querySelector('.song-icon').style.width = `${val}px`;
     } else if (name === "city") {
         window.config.city = val;
+        fetchCurrentWeather();
     } else if (name === "use24HTime") {
         window.config.use24HTime = val;
     } else if (name === "animatedWeatherIcons") {
         window.config.animatedWeatherIcons = val;
+        fetchCurrentWeather();
+    } else if (name === "visauliserHeight") {
+        window.config.visauliserHeight = val;
     }
 }
 

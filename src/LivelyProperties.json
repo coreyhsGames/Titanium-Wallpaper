@@ -55,6 +55,22 @@
         "type": "color",
         "value": "#fc0303"
     },
+    "visauliserHeight": {
+        "max": 750,
+        "min": 100,
+        "step": 10,
+        "text": "Visualiser Height",
+        "type": "slider",
+        "value": 300
+    },
+    "albumSize": {
+        "max": 400,
+        "min": 150,
+        "step": 10,
+        "text": "Album Size",
+        "type": "slider",
+        "value": 200
+    },
     "opacity": {
         "max": 100,
         "min": 0,
@@ -77,13 +93,5 @@
         "text": "Neon Glow Intensity",
         "type": "slider",
         "value": 10
-    },
-    "albumSize": {
-        "max": 400,
-        "min": 150,
-        "step": 10,
-        "text": "Album Size",
-        "type": "slider",
-        "value": 200
     }
 }

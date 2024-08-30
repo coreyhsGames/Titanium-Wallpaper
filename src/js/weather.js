@@ -27,6 +27,17 @@ const iconsAnimated = {
     'thunderstorm': './weatherIcons/animated/severe-thunderstorm.svg',
 };
 
+function waitForCityConfig() {
+    return new Promise((resolve) => {
+        const checkCityInterval = setInterval(() => {
+            if (window.config && window.config.city) {
+                clearInterval(checkCityInterval);
+                resolve();
+            }
+        }, 100); // Check every 100 milliseconds
+    });
+}
+
 async function fetchCurrentWeather() {
     const cityReposnse = await fetch(`https://nominatim.openstreetmap.org/search?city=${window.config.city}&format=json`);
     const cityData = await cityReposnse.json();
@@ -56,8 +67,17 @@ async function fetchCurrentWeather() {
         document.getElementById('current-weather-widget').innerHTML = `<p>Error fetching weather data. Please try again later.</p>`;
     }
 };
-fetchCurrentWeather();
-setInterval(fetchCurrentWeather, 1000);
+window.fetchCurrentWeather = fetchCurrentWeather;
+
+// Use the function to wait for the city configuration and then fetch the weather
+async function initWeatherWidget() {
+    await waitForCityConfig();
+    fetchCurrentWeather();
+    setInterval(fetchCurrentWeather, 60000);
+}
+
+// Call initWeatherWidget to start the process
+initWeatherWidget();
 
 function getWeatherDescriptionAndIcon(weatherCode, animated) {
     const icons = animated ? iconsAnimated : iconsStatic;

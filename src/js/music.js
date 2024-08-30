@@ -4,7 +4,6 @@ const headerArtist = document.getElementById('song-artist');
 const headerTitle = document.getElementById('song-name');
 
 var numberOfFrequencies = 1;
-var amplitude = 300;
 var spectrumScale = 1;
 
 async function livelyCurrentTrack(data) {
@@ -30,7 +29,7 @@ async function drawSpectrum(audioArray) {
     let canvas = document.getElementById("canvas");
     let ctx = canvas.getContext("2d");
     let Wwidth = Math.round(window.innerWidth * spectrumScale);
-    let Wheight = Math.round((window.innerHeight / 2 + amplitude) * spectrumScale);
+    let Wheight = Math.round((window.innerHeight / 2 + 300) * spectrumScale);
     canvas.setAttribute('width', Wwidth);
     canvas.setAttribute('height', Wheight);
 
@@ -56,14 +55,14 @@ async function drawSpectrum(audioArray) {
         if (i == 0) {
             ctx.fillStyle = interpolateColor(hexToRGB(window.config.inputColor1), hexToRGB(window.config.inputColor2), a / numberOfFrequencies);
             ctx.shadowColor = interpolateColor(hexToRGB(window.config.inputColor1), hexToRGB(window.config.inputColor2), a / numberOfFrequencies);
-            ctx.fillRect(offset + a * (barwidth + spacing), height - 50 - Math.round((amplitude * spectrumScale) * Math.min(1, audioArray[i])), barwidth, Math.round((amplitude * spectrumScale) * Math.min(1, audioArray[i])));
+            ctx.fillRect(offset + a * (barwidth + spacing), height - 50 - Math.round((window.config.visauliserHeight * spectrumScale) * Math.min(1, audioArray[i])), barwidth, Math.round((window.config.visauliserHeight * spectrumScale) * Math.min(1, audioArray[i])));
             a++
         }
         else {
             if (audioArray[i] != audioArray[i - 1]) {
                 ctx.fillStyle = interpolateColor(hexToRGB(window.config.inputColor1), hexToRGB(window.config.inputColor2), a / numberOfFrequencies);
                 ctx.shadowColor = interpolateColor(hexToRGB(window.config.inputColor1), hexToRGB(window.config.inputColor2), a / numberOfFrequencies);
-                ctx.fillRect(offset + a * (barwidth + spacing), height - 50 - Math.round((amplitude * spectrumScale) * Math.min(1, audioArray[i])), barwidth, Math.round((amplitude * spectrumScale) * Math.min(1, audioArray[i])));
+                ctx.fillRect(offset + a * (barwidth + spacing), height - 50 - Math.round((window.config.visauliserHeight * spectrumScale) * Math.min(1, audioArray[i])), barwidth, Math.round((window.config.visauliserHeight * spectrumScale) * Math.min(1, audioArray[i])));
                 a++
             }
         }
