@@ -132,5 +132,5 @@ async function getNextSubject() {
     }
     document.getElementById('next-subject').innerText = message;
 }
-getNextSubject();
-setInterval(getNextSubject, 60000);
+//getNextSubject();
+//setInterval(getNextSubject, 60000);

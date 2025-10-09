@@ -11,34 +11,46 @@
 <body>
     <div id="backgroundOverlay" style="background-color: rgba(0, 0, 0, 0.3);"></div>
     <img id="backgroundImg" src="./images/default.jpg"></img>
-    <p style="position: absolute; color: #ffff; padding: 10px; text-shadow: 1px 1px 4px #000;">Titanium Wallpaper v1.0.3 | Made by coreyhsGames</p>
-    <div style="display: flex; flex-direction: column; align-items: center;">
-        <div class="widget" id="time-widget" style="margin-top: 15px;">
-            <h2 style="font-size: 100px;">Time</h2>
-        </div>
-        <div class="widget" id="date-widget">
-            <h2 style="font-size: 48px;">Date</h2>
-        </div>
-    </div>
-    <div>
-        <div class="music-player hide">
-            <div style="display: flex; justify-content: center;">
-                <img src="./images/placeholder.jpg" class="song-icon" style="width: 200px;">
+    <p style="position: absolute; color: #ffff; padding: 10px; text-shadow: 1px 1px 4px #000;">Titanium Wallpaper v1.2.0 | Made by coreyhsGames</p>
+    <div style="width: 100%; height: 100%; position: absolute;">
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <div class="widget" id="time-widget" style="margin-top: 15px;">
+                <h2 style="font-size: 100px;">Time</h2>
             </div>
-            <div class="song-info">
-                <h3 id="song-name">Song Name</h3>
-                <h3 id="song-artist">Song Artist</h3>
-                <h3 id="song-album">Song Album</h3>
+            <div class="widget" id="date-widget">
+                <h2 style="font-size: 48px;">Date</h2>
             </div>
         </div>
-        <canvas id="canvas"></canvas>
-        <div class="main-widget">
-            <div class="widget" id="current-weather-widget">
-                <div class="weather-icon" id="icon"></div>
-                <h3 id="temperature">Loading...</h3>
+        <div>
+            <div class="music-player hide">
+                <div style="display: flex; justify-content: center;">
+                    <img src="./images/placeholder.jpg" class="song-icon" style="width: 200px;">
+                </div>
+                <div class="song-info">
+                    <h3 id="song-name">Song Name</h3>
+                    <h3 id="song-artist">Song Artist</h3>
+                    <h3 id="song-album">Song Album</h3>
+                </div>
             </div>
-            <div class="widget" id="next-sub-widget">
-                <h2 id="next-subject">Loading...</h2>
+            <canvas id="canvas"></canvas>
+            <div class="widget-container">
+                <div class="weather-widget">
+                    <div class="current-weather">
+                        <div class="left">
+                            <h2 id="city-name"></h2>
+                            <h1 id="temperature"></h1>
+                        </div>
+                        <div class="right">
+                            <div class="weather-icon" id="current-weather-icon"></div>
+                            <h2 id="weather-code"></h2>
+                            <h2 id="high-and-low"></h2>
+                        </div>
+                    </div>
+                    <div class="hourly-weather" id="hourly-weather-container">
+                    </div>
+                    <div class="daily-weather" id="daily-weather-container">
+                    </div>
+                </div>
             </div>
         </div>
     </div>

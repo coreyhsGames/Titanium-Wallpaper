@@ -56,7 +56,7 @@
         "value": "#fc0303"
     },
     "visauliserHeight": {
-        "max": 750,
+        "max": 1500,
         "min": 100,
         "step": 10,
         "text": "Visualiser Height",

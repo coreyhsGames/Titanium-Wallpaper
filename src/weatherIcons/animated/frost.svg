@@ -1,16 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- (c) ammap.com | SVG weather icons -->
-<svg width="56" height="48" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="10 10 36 35">
   <defs>
     <filter id="blur" x="-.20655" y="-.21122" width="1.403" height="1.4997">
-      <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
-      <feOffset dx="0" dy="4" result="offsetblur" />
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="0" dy="4" result="offsetblur"/>
       <feComponentTransfer>
-        <feFuncA slope="0.05" type="linear" />
+        <feFuncA slope="0.05" type="linear"/>
       </feComponentTransfer>
       <feMerge>
-        <feMergeNode />
-        <feMergeNode in="SourceGraphic" />
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
     <style type="text/css">
@@ -115,16 +113,13 @@
     </style>
   </defs>
   <g transform="translate(0,2)" filter="url(#blur)">
-    <g class="am-weather-frost" stroke="#57a0ee" transform="translate(0,2)" fill="none" stroke-width="2"
-      stroke-linecap="round"
-      style="-moz-animation-duration:1.11s;-moz-animation-iteration-count:infinite;-moz-animation-name:am-weather-frost;-moz-animation-timing-function:linear;-webkit-animation-duration:1.11s;-webkit-animation-iteration-count:infinite;-webkit-animation-name:am-weather-frost;-webkit-animation-timing-function:linear">
-      <path d="M11,32H45" />
-      <path d="M15.5,37H40.5" />
-      <path d="M22.5,42H33.5" />
+    <g class="am-weather-frost" stroke="#57a0ee" transform="translate(0,2)" fill="none" stroke-width="2" stroke-linecap="round" style="-moz-animation-duration:1.11s;-moz-animation-iteration-count:infinite;-moz-animation-name:am-weather-frost;-moz-animation-timing-function:linear;-webkit-animation-duration:1.11s;-webkit-animation-iteration-count:infinite;-webkit-animation-name:am-weather-frost;-webkit-animation-timing-function:linear">
+      <path d="M11,32H45"/>
+      <path d="M15.5,37H40.5"/>
+      <path d="M22.5,42H33.5"/>
     </g>
     <g>
-      <path stroke="#57a0ee" transform="translate(0,0)" fill="none" stroke-width="2" stroke-linecap="round"
-        d="M28,31V9M28,22l11,-3.67M34,20l2,-4M34,20l4,2M28,22l-11,-3.67M22,20l-2,-4M22,20l-4,2M28,14.27l3.01,-3.02M28,14.27l-3.01,-3.02" />
+      <path stroke="#57a0ee" transform="translate(0,0)" fill="none" stroke-width="2" stroke-linecap="round" d="M28,31V9M28,22l11,-3.67M34,20l2,-4M34,20l4,2M28,22l-11,-3.67M22,20l-2,-4M22,20l-4,2M28,14.27l3.01,-3.02M28,14.27l-3.01,-3.02"/>
     </g>
   </g>
 </svg>

@@ -1,9 +1,9 @@
 {
-  "AppVersion": "1.0.0.0",
-  "Title": "Titanium Wallpaper",
+  "AppVersion": "1.2.0",
+  "Title": "Titanium Wallpaper (v1.2.0)",
   "Thumbnail": "thumbnail.png",
   "Preview": "",
-  "Desc": "Made by coreyhsGames.",
+  "Desc": "A basic Lively wallpaper. Showing local time/date, music, audio visualiser, weather, and much more!",
   "Author": "coreyhsGames",
   "License": "MIT",
   "Contact": "",
@@ -12,6 +12,5 @@
   "Arguments": " --audio --system-nowplaying",
   "IsAbsolutePath": false,
   "Id": null,
-  "Tags": null,
-  "Version": 0
+  "Tags": null
 }

@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- (c) ammap.com | SVG weather icons -->
-<svg width="56" height="48" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="10.06 4.3 34.24 39.72">
  <defs>
   <filter id="blur" x="-.24684" y="-.19575" width="1.4937" height="1.4959">
    <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
