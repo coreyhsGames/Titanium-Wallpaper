@@ -16,6 +16,9 @@ async function livelyCurrentTrack(data) {
         headerAlbum.innerText = obj.AlbumTitle;
 
         songIcon.src = "data:image/png;base64, " + obj.Thumbnail;
+        songIcon.onerror = () => {
+            songIcon.src = "./images/noAlbumCover.png";
+        };
 
         musicPlaying.classList.remove('hide');
     } else {
@@ -71,6 +74,20 @@ async function drawSpectrum(audioArray) {
     }
 
     numberOfFrequencies = a;
+
+    // Calculate average loudness
+    let avg = 0;
+    for (let i = 0; i < audioArray.length; i++) {
+        avg += audioArray[i];
+    }
+    avg = avg / audioArray.length;
+
+    // Map loudness to scale (adjust sensitivity with multiplier)
+    let scale = 1 + avg * 1.5; // 1 = normal size, +1.5x when loud
+
+    // Smooth transition
+    songIcon.style.transition = "transform 0.1s ease-out";
+    songIcon.style.transform = `scale(${scale})`;
 }
 
 function interpolateColor(c0, c1, f) {
